@@ -48,5 +48,6 @@
 <script src="{{asset('AdminLTE')}}/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('AdminLTE')}}/dist/js/demo.js"></script>
+
 </body>
 </html>

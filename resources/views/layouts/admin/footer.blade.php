@@ -48,5 +48,14 @@
 <script src="{{asset('AdminLTE')}}/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('AdminLTE')}}/dist/js/demo.js"></script>
+<script src="{{asset('AdminLTE')}}/plugins/moment/moment.min.js"></script>
+<script src="{{asset('AdminLTE')}}/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+<!-- <script type="text/javascript">
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script> -->
+
+
 </body>
 </html>
