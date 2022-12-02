@@ -5,10 +5,26 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-     
-    </ul>
 
-    
+    </ul>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+
+
+          <div  aria-labelledby="navbarDropdown">
+              <a  href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+              </form>
+          </div>
+
+      </li>
+      </ul>
+
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
@@ -22,6 +38,6 @@
     </form>
 
     <!-- Right navbar links -->
-    
+
   </nav>
   <!-- /.navbar -->

@@ -1,87 +1,120 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
 
 
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AsesiController;
+use App\Http\Controllers\AsesorController;
+use App\Http\Controllers\AdminController;
+
 /*
+
 |--------------------------------------------------------------------------
+
 | Web Routes
+
 |--------------------------------------------------------------------------
+
 |
+
 | Here is where you can register web routes for your application. These
+
 | routes are loaded by the RouteServiceProvider within a group which
+
 | contains the "web" middleware group. Now create something great!
+
 |
+
 */
 
-//INI routes untuk admin
 
-Route::get('/admin', function () {
-    return view('admin/dashboard');
+
+Route::get('/', function () {
+
+    return view('auth/login');
+
 });
 
-Route::get('/admin/dashboard', function () {
-    return view('admin/dashboard');
-})->name('admin/dashboard') ;
 
-Route::get('/admin/data', function () { 
-    return view('admin/data');
-})->name('admin/data') ;
 
-Route::get('/admin/event', function () { 
-    return view('admin/event');
-})->name('admin/event') ;
-
-Route::get('/admin/asesor', function () { 
-    return view('admin/asesor');
-})->name('admin/asesor') ;
-
-Route::get('/admin/asesi', function () { 
-    return view('admin/asesi');
-})->name('admin/asesi') ;
-
-Route::get('/admin/penilaian', function () { 
-    return view('admin/penilaian');
-})->name('admin/penilaian') ;
-
-Route::get('/admin/sertifikat', function () { 
-    return view('admin/sertifikat');
-})->name('admin/sertifikat') ;
-
-//INI routes untuk asesor
-
-Route::get('/asesor', function () { 
-    return view('asesor/profile');
-})->name('asesor/asesor') ;
-
-Route::get('/asesor/profile', function () { 
-    return view('asesor/profile');
-})->name('asesor/profile') ;
-
-Route::get('/asesor/penilaian', function () { 
-    return view('asesor/penilaian');
-})->name('asesor/penilaian') ;
-
-Route::get('/asesor/data-asesi', function () { 
-    return view('asesor/data-asesi');
-})->name('asesor/data-asesi') ;
-
-//INI routes untuk asesi
-
-Route::get('/asesi', function () { 
-    return view('asesi/profile');
-})->name('asesi/profile') ;
-
-Route::get('/asesi/profile', function () { 
-    return view('asesi/profile');
-})->name('asesi/profile') ;
-
-Route::get('/asesi/administrasi', function () { 
-    return view('asesi/administrasi');
-})->name('asesi/administrasi') ;
+Auth::routes();
 
 
 
+/*------------------------------------------
+
+--------------------------------------------
+
+All Normal Users Routes List
+
+--------------------------------------------
+
+--------------------------------------------*/
+
+Route::middleware(['auth', 'user-access:user'])->group(function () {
 
 
+
+    Route::get('/asesi/administrasi', [AsesiController::class, 'index'])->name('asesi.home');
+
+    Route::get('/asesi/profile', [AsesiController::class, 'profile'])->name('asesi.profile');
+    Route::get('/asesi/formulir', [AsesiController::class, 'formulir'])->name('asesi.formulir');
+
+});
+
+
+
+/*------------------------------------------
+
+--------------------------------------------
+
+All Admin Routes List
+
+--------------------------------------------
+
+--------------------------------------------*/
+
+Route::middleware(['auth', 'user-access:asesor'])->group(function () {
+
+
+
+    Route::get('/asesor/home', [AsesorController::class, 'index'])->name('asesor.home');
+    Route::get('/asesor/penilaian', [AsesorController::class, 'penilaian'])->name('asesor.penilaian');
+    Route::get('/asesor/data', [AsesorController::class, 'data'])->name('asesor.data');
+    Route::get('/asesor/dataSesi', [AsesorController::class, 'dataSesi'])->name('asesor.dataSesi');
+    Route::get('/asesor/datakelas', [AsesorController::class, 'dataKelas'])->name('asesor.dataKelas');
+    Route::get('/asesor/dataPengujian', [AsesorController::class, 'dataPengujian'])->name('asesor.dataPengujian');
+
+});
+
+
+
+/*------------------------------------------
+
+--------------------------------------------
+
+All Admin Routes List
+
+--------------------------------------------
+
+--------------------------------------------*/
+
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+
+
+
+    Route::get('/admin/home', [AdminController::class, 'index'])->name('admin.home');
+    Route::get('/admin/data', [AdminController::class, 'data'])->name('admin.data');
+    Route::get('/admin/event', [AdminController::class, 'event'])->name('admin.event');
+    Route::get('/admin/asesor', [AdminController::class, 'asesor'])->name('admin.asesor');
+    Route::get('/admin/asesi', [AdminController::class, 'asesi'])->name('admin.asesi');
+    Route::get('/admin/penilaian', [AdminController::class, 'penilaian'])->name('admin.penilaian');
+    Route::get('/admin/sertifikat', [AdminController::class, 'sertifikat'])->name('admin.sertifikat');
+
+
+});
 

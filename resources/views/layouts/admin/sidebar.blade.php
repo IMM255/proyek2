@@ -25,15 +25,15 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview ">
-            <a href="{{route('admin/dashboard');}}" class="nav-link @yield('dashboard')">
+            <a href="{{route('admin.home');}}" class="nav-link @yield('dashboard')">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Menu
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('admin/data');}}" class="nav-link @yield('data')">
+            <a href="{{route('admin.data');}}" class="nav-link @yield('data')">
               <i class="nav-icon fas fa-th"></i>
               <p>
                  data Asesi
@@ -41,7 +41,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="{{route('admin/event');}}" class="nav-link @yield('event')">
+            <a href="{{route('admin.event');}}" class="nav-link @yield('event')">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Event
@@ -58,15 +58,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('admin/asesor');}}" class="nav-link @yield('asesor')">
-                <i class="nav-icon fas fa-user-tie"></i>                
+                <a href="{{route('admin.asesor');}}" class="nav-link @yield('asesor')">
+                <i class="nav-icon fas fa-user-tie"></i>
                  <p>
                   Asesor
                 </p>
                 </a>
               </li>
               <li class="nav-item ">
-                <a href="{{route('admin/asesi');}}" class="nav-link @yield('asesi')">
+                <a href="{{route('admin.asesi');}}" class="nav-link @yield('asesi')">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   Asesi
@@ -76,15 +76,15 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="{{route('admin/penilaian');}}" class="nav-link @yield('penilaian')">
-            <i class="nav-icon fas fa-tasks"></i>           
+            <a href="{{route('admin.penilaian');}}" class="nav-link @yield('penilaian')">
+            <i class="nav-icon fas fa-tasks"></i>
               <p>
                 Penilaian
               </p>
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="{{route('admin/sertifikat');}}" class="nav-link @yield('sertifikat')">
+            <a href="{{route('admin.sertifikat');}}" class="nav-link @yield('sertifikat')">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Kelola sertifikat

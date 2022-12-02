@@ -25,31 +25,57 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview ">
-            <a href="{{route('asesor/profile');}}" class="nav-link @yield('profile')">
+            <a href="{{route('asesor.home');}}" class="nav-link @yield('dashboard')">
+            <i class="nav-icon fas fa-user"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                data
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('asesor.dataSesi');}}" class="nav-link @yield('dataSesi')">
+                <i class="nav-icon fas fa-user-tie"></i>
+                 <p>
+                  Data Sesi
+                </p>
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a href="{{route('asesor.dataKelas');}}" class="nav-link @yield('dataKelas')">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Data Kelas
+                </p>
+                </a>
+              </li>
+          <li class="nav-item has-treeview">
+            <a href="{{route('asesor.dataPengujian');}}" class="nav-link @yield('dataPengujian')">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Data pengujian
+              </p>
+            </a>
+          </li>
+        </ul>
+        <li class="nav-item has-treeview ">
+            <a href="{{route('asesor.home');}}" class="nav-link @yield('profile')">
             <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile
               </p>
             </a>
-            
+
           </li>
-          <li class="nav-item">
-            <a href="{{route('asesor/data-asesi');}}" class="nav-link @yield('data-asesi')">
-            <i class="nav-icon fas fa-users"></i>           
-               <p>
-                Data Asesi
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="{{route('asesor/penilaian');}}" class="nav-link @yield('penilaian')">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Penilaian
-              </p>
-            </a>
-          </li>
-        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

@@ -25,25 +25,35 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview ">
-            <a href="{{route('asesi/profile');}}" class="nav-link @yield('profile')">
+            <a href="{{route('asesi.profile');}}" class="nav-link @yield('profile')">
             <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile
               </p>
             </a>
-            
+
           </li>
           <li class="nav-item">
-            <a href="{{route('asesi/administrasi');}}" class="nav-link @yield('administrasi')">
-            <i class="nav-icon fas fa-users"></i>           
+            <a href="{{route('asesi.home');}}" class="nav-link @yield('administrasi')">
+            <i class="nav-icon fas fa-users"></i>
                <p>
                 Administrasi
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{route('asesi.formulir');}}" class="nav-link @yield('formulir')">
+            <i class="nav-icon fas fa-users"></i>
+               <p>
+                Formulir
+            </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
+
   </aside>
