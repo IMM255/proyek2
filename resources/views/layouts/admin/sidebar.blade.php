@@ -32,14 +32,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{route('admin.data');}}" class="nav-link @yield('data')">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                 data Asesi
-              </p>
-            </a>
-          </li>
           <li class="nav-item has-treeview">
             <a href="{{route('admin.event');}}" class="nav-link @yield('event')">
               <i class="nav-icon fas fa-copy"></i>
@@ -49,31 +41,12 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-user-plus"></i>
+            <a href="{{route('admin.Manajemen-Akun');}}" class="nav-link @yield('Manajemen-Akun')">
+            <i class="nav-icon fas fa-tasks"></i>
               <p>
-                Tambah Akun
-                <i class="right fas fa-angle-left"></i>
+                Manajemen Akun
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('admin.asesor');}}" class="nav-link @yield('asesor')">
-                <i class="nav-icon fas fa-user-tie"></i>
-                 <p>
-                  Asesor
-                </p>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a href="{{route('admin.asesi');}}" class="nav-link @yield('asesi')">
-                <i class="nav-icon fas fa-user"></i>
-                <p>
-                  Asesi
-                </p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="{{route('admin.penilaian');}}" class="nav-link @yield('penilaian')">

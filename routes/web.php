@@ -88,6 +88,8 @@ Route::middleware(['auth', 'user-access:asesor'])->group(function () {
     Route::get('/asesor/dataSesi', [AsesorController::class, 'dataSesi'])->name('asesor.dataSesi');
     Route::get('/asesor/datakelas', [AsesorController::class, 'dataKelas'])->name('asesor.dataKelas');
     Route::get('/asesor/dataPengujian', [AsesorController::class, 'dataPengujian'])->name('asesor.dataPengujian');
+    Route::get('/asesor/detailkelas', [AsesorController::class, 'detailKelas'])->name('asesor.detailKelas');
+
 
 });
 
@@ -110,11 +112,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [AdminController::class, 'index'])->name('admin.home');
     Route::get('/admin/data', [AdminController::class, 'data'])->name('admin.data');
     Route::get('/admin/event', [AdminController::class, 'event'])->name('admin.event');
-    Route::get('/admin/asesor', [AdminController::class, 'asesor'])->name('admin.asesor');
-    Route::get('/admin/asesi', [AdminController::class, 'asesi'])->name('admin.asesi');
+    Route::get('/admin/Manajemen-Akun', [AdminController::class, 'akun'])->name('admin.Manajemen-Akun');
     Route::get('/admin/penilaian', [AdminController::class, 'penilaian'])->name('admin.penilaian');
     Route::get('/admin/sertifikat', [AdminController::class, 'sertifikat'])->name('admin.sertifikat');
-
 
 });
 

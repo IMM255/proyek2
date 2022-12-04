@@ -26,9 +26,9 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview ">
             <a href="{{route('asesor.home');}}" class="nav-link @yield('dashboard')">
-            <i class="nav-icon fas fa-user"></i>
+            <i class="nav-icon fas fa-house"></i>
               <p>
-                Dashboard
+                Beranda
               </p>
             </a>
 
@@ -37,14 +37,14 @@
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-user-plus"></i>
               <p>
-                data
+                Data
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('asesor.dataSesi');}}" class="nav-link @yield('dataSesi')">
-                <i class="nav-icon fas fa-user-tie"></i>
+                <i class="nav-icon fas fa-clock"></i>
                  <p>
                   Data Sesi
                 </p>

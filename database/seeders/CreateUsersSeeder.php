@@ -33,7 +33,6 @@ class CreateUsersSeeder extends Seeder
     {
 
         $users = [
-
             [
 
                'name'=>'Asesor User',
@@ -45,7 +44,6 @@ class CreateUsersSeeder extends Seeder
                'password'=> bcrypt('123456'),
 
             ],
-
             [
 
                'name'=>'admin User',
@@ -57,7 +55,6 @@ class CreateUsersSeeder extends Seeder
                'password'=> bcrypt('123456'),
 
             ],
-
             [
 
                'name'=>'asesi',

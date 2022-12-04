@@ -26,12 +26,8 @@ class AdminController extends Controller
         return view('admin/event');
     }
 
-    public function asesor(){
-        return view('admin/asesor');
-    }
-
-    public function asesi(){
-        return view('admin/asesi');
+    public function akun(){
+        return view('admin/manajemenAkun');
     }
 
     public function penilaian(){
@@ -41,4 +37,7 @@ class AdminController extends Controller
     public function sertifikat(){
         return view('admin/sertifikat');
     }
+
+
+
 }

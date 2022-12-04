@@ -49,5 +49,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('AdminLTE')}}/dist/js/demo.js"></script>
 
+{{-- fontawesome --}}
+<script src="https://kit.fontawesome.com/01bb568c0b.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

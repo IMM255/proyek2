@@ -34,6 +34,10 @@ class AsesorController extends Controller
         return view('asesor/dataKelas');
     }
 
+    public function detailKelas(){
+        return view('asesor/detailKelas');
+    }
+
     public function dataPengujian(){
         return view('asesor/dataPengujian');
     }
