@@ -51,20 +51,18 @@
                   </tr>
                 </thead>
                 <tbody>
+                    @foreach ($asesis as $asesi )
+
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
+                    <th scope="row">{{ $loop->iteration}}</th>
+                    <td>{{$asesi->name}}</td>
                     <td><a class="badge badge-pill badge-warning">Belum Diuji</a></td>
                     <td><!-- Large modal -->
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa-solid fa-info"></i></button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td><a class="badge badge-pill badge-success">Sudah Diuji</a></td>
-                    <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa-solid fa-info"></i></button></td>
-                  </tr>
+
+                  @endforeach
                 </tbody>
               </table>
         </div>
@@ -121,7 +119,10 @@
         </div>
       </div>
       {{-- end of modal --}}
-
+      <div class="row">
+        <div class="mx-auto mt-3">
+        {{ $asesis->fragment('judul')->links() }}
+        </div>
   </div>
 
 

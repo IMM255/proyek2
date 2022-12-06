@@ -68,7 +68,7 @@
           </li>
         </ul>
         <li class="nav-item has-treeview ">
-            <a href="{{route('asesor.home');}}" class="nav-link @yield('profile')">
+            <a href="{{route('asesor.profile');}}" class="nav-link @yield('profile')">
             <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile

@@ -4,18 +4,18 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Classes;
+use Faker\Factory as Faker;
 
-class DatabaseSeeder extends Seeder
+class ClassSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(ClassSeeder::class);
-        $this->call(AsesiSeeder::class);
-        $this->call(CreateUsersSeeder::class);
+        \App\Models\Classes::factory()->count(2)->create();
     }
 }

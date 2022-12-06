@@ -110,6 +110,10 @@ class LoginController extends Controller
 
                 return redirect()->route('admin.home');
 
+            }else if (auth()->user()->type== 'managerSertifikasi'){
+
+                return redirect()->route('managerSertifikasi.home');
+
             }else{
 
                 return redirect()->route('asesi.home');

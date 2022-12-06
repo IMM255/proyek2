@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AsesiController;
 use App\Http\Controllers\AsesorController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ManagerSertifikasiController;
 
 /*
 
@@ -83,12 +84,12 @@ Route::middleware(['auth', 'user-access:asesor'])->group(function () {
 
 
     Route::get('/asesor/home', [AsesorController::class, 'index'])->name('asesor.home');
-    Route::get('/asesor/penilaian', [AsesorController::class, 'penilaian'])->name('asesor.penilaian');
+    Route::get('/asesor/profile', [AsesorController::class, 'profile'])->name('asesor.profile');
     Route::get('/asesor/data', [AsesorController::class, 'data'])->name('asesor.data');
     Route::get('/asesor/dataSesi', [AsesorController::class, 'dataSesi'])->name('asesor.dataSesi');
     Route::get('/asesor/datakelas', [AsesorController::class, 'dataKelas'])->name('asesor.dataKelas');
     Route::get('/asesor/dataPengujian', [AsesorController::class, 'dataPengujian'])->name('asesor.dataPengujian');
-    Route::get('/asesor/detailkelas', [AsesorController::class, 'detailKelas'])->name('asesor.detailKelas');
+    Route::get('/asesor/detailkelas/{class_id}', [AsesorController::class, 'detailKelas'])->name('asesor.detailKelas');
 
 
 });
@@ -118,3 +119,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
 });
 
+Route::middleware(['auth', 'user-access:managerSertifikasi'])->group(function () {
+
+
+    Route::get('/managerSertifikasi/home', [ManagerSertifikasiController::class, 'index'])->name('managerSertifikasi.home');
+
+});

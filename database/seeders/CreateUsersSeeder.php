@@ -66,6 +66,15 @@ class CreateUsersSeeder extends Seeder
                'password'=> bcrypt('123456'),
 
             ],
+            [
+                'name' => 'managerSertifikasi',
+
+                'email' => 'managerSertifikasi@gmail.com',
+
+                'type' => 3,
+
+                'password' => bcrypt('123456'),
+            ]
 
         ];
 
