@@ -68,7 +68,7 @@
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-user-plus"></i>
               <p>
-                Master Data hahaha
+                Master Data
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
