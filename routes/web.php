@@ -116,6 +116,11 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/Manajemen-Akun', [AdminController::class, 'akun'])->name('admin.Manajemen-Akun');
     Route::get('/admin/penilaian', [AdminController::class, 'penilaian'])->name('admin.penilaian');
     Route::get('/admin/sertifikat', [AdminController::class, 'sertifikat'])->name('admin.sertifikat');
+    Route::get('/admin/dataSesi', [adminController::class, 'dataSesi'])->name('admin.dataSesi');
+    Route::get('/admin/datakelas', [adminController::class, 'dataKelas'])->name('admin.dataKelas');
+    Route::get('/admin/dataPengujian', [adminController::class, 'dataPengujian'])->name('admin.dataPengujian');
+    Route::get('/admin/detailkelas/{class_id}', [adminController::class, 'detailKelas'])->name('admin.detailKelas');
+
 
 });
 

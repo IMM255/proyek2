@@ -64,6 +64,40 @@
               </p>
             </a>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Master Data
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('admin.dataSesi');}}" class="nav-link @yield('dataSesi')">
+                <i class="nav-icon fas fa-clock"></i>
+                 <p>
+                  Data Sesi
+                </p>
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a href="{{route('admin.dataKelas');}}" class="nav-link @yield('dataKelas')">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Data Kelas
+                </p>
+                </a>
+              </li>
+          <li class="nav-item has-treeview">
+            <a href="{{route('admin.dataPengujian');}}" class="nav-link @yield('dataPengujian')">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Data pengujian
+              </p>
+            </a>
+          </li>
+        </ul>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
