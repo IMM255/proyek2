@@ -34,8 +34,17 @@
                     <td><!-- Large modal -->
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa-solid fa-info"></i></button>
                     </td>
+                    <td>
+                        <a href="{{route('dataKelas.editAsesis',['asesi' => $asesi->id])}}" class="btn btn-secondary" title="Edit siswa">Edit</a>
+                        <form action="{{route('dataKelas.deleteAsesis',['asesi' => $asesi->id ])}}"
+                        method="POST" class="d-inline">
+                        @csrf @method('DELETE')
+                        <button type="submit" class="btn btn-danger shadow-none btn-hapus"
+                        title="Hapus Siswa" data-name="{{$asesi->name}}">
+                        Hapus</button>
+                        </form>
+                    </td>
                   </tr>
-
                   @endforeach
                 </tbody>
               </table>

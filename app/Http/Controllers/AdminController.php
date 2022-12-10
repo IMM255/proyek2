@@ -60,12 +60,9 @@ class AdminController extends Controller
     }
 
 
-    public function detailKelasCreate(Kelas $kelas){
-        $kelas = Kelas::where('kelas_id',$asesis->kelas_id)->get();
-        return view('admin/detailKelasCreate',[
-                    'kelas' => $kelas,]
-                    );
-    }
+
+
+
 
 
     public function dataPengujian(){
@@ -121,6 +118,55 @@ class AdminController extends Controller
         $kelas->update($validateData);
         Alert::success('Berhasil', "Kelas $request->nama_kelas telah di update");
         return redirect()->Route('admin.dataKelas');
+    }
+
+
+    public function datalKelasCreateAsesis(){
+        $kelases = kelas::orderBy('nama_kelas')->get();
+        return view('admin.dataKelasCreateAsesis',compact('kelases'));
+
+    }
+
+    public function dataKelasStoreAsesis(Request $request){
+        $validateData = $request->validate([
+            'name' => 'required',
+            'nisn' => 'required|integer',
+            'kelas_id' => 'required|exists:App\Models\Kelas,id',
+        ]);
+         Asesi::create($validateData);
+        Alert::success('Berhasil',"Siswa $request->name berhasil dibuat");
+        return redirect()->Route('admin.dataKelas');
+
+    }
+
+    public function dataKelasEditAsesi(Asesi $asesi){
+        $kelases = Kelas::orderBy('nama_kelas')->get();
+        return view('admin.dataKelasEditAsesi',[
+            'asesi' => $asesi,
+            'kelases' => $kelases,
+        ]);
+
+    }
+
+    public function dataKelasUpdateAsesi(Request $request, Asesi $asesi)
+    {
+        $validateData = $request->validate([
+            'name' => 'required',
+            'nisn' => 'required|integer',
+            'kelas_id' => 'required|exists:App\Models\Kelas,id',
+        ]);
+         $asesi->update($validateData);
+        Alert::success('Berhasil',"Siswa $request->name berhasil diubah");
+        return redirect()->Route('admin.dataKelas');
+
+    }
+
+    public function dataKelasDeleteAsesi(Asesi $asesi)
+    {
+        $asesi->delete();
+        Alert::success('Berhasil',"data $asesi->name Berhasil dihapus");
+        return redirect()->Route('admin.dataKelas');
+
     }
 
 

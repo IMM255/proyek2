@@ -8,13 +8,12 @@
   <div class="text-end pt-5 pb-4">
     <a href="{{route ('dataKelas.create')}}" class="btn btn-info">Tambah Kelas</a>
     </a>
+    <a href="{{route ('dataKelas.createAsesis')}}" class="btn btn-info">Tambah siswa</a>
+    </a>
   </div>
-
-
 
   <div class="row row-cols-1 row-cols-md-4 g-4" style="margin-top:2em; margin-left: 1em; margin-right: 1em;">
     {{-- card   --}}
-
     @foreach ($kelases as $kelas)
 
     <div class="col">

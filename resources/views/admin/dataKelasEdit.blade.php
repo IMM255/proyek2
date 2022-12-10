@@ -30,8 +30,8 @@
   <div class="col-md-4">
     <input id="jumlah_siswa" type="text"
     class="form-control @error('jumlah_siswa') is-invalid @enderror w-25"
-    name="jumlah_siswa" autofocus
-    value="{{ old('jumlah_siswa') ?? $kelas->jumlah_siswa ?? '' }}">
+    name="jumlah_siswa"
+    value="{{ old('jumlah_siswa') ?? $kelas->Jumlah_siswa ?? '' }}"autofocus>
     @error('jumlah_siswa')
       <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
