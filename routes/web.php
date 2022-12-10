@@ -89,7 +89,7 @@ Route::middleware(['auth', 'user-access:asesor'])->group(function () {
     Route::get('/asesor/dataSesi', [AsesorController::class, 'dataSesi'])->name('asesor.dataSesi');
     Route::get('/asesor/datakelas', [AsesorController::class, 'dataKelas'])->name('asesor.dataKelas');
     Route::get('/asesor/dataPengujian', [AsesorController::class, 'dataPengujian'])->name('asesor.dataPengujian');
-    Route::get('/asesor/detailkelas/{class_id}', [AsesorController::class, 'detailKelas'])->name('asesor.detailKelas');
+    Route::get('/asesor/detailkelas/{kelas_id}', [AsesorController::class, 'detailKelas'])->name('asesor.detailKelas');
 
 
 });
@@ -117,9 +117,18 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/penilaian', [AdminController::class, 'penilaian'])->name('admin.penilaian');
     Route::get('/admin/sertifikat', [AdminController::class, 'sertifikat'])->name('admin.sertifikat');
     Route::get('/admin/dataSesi', [adminController::class, 'dataSesi'])->name('admin.dataSesi');
+
     Route::get('/admin/datakelas', [adminController::class, 'dataKelas'])->name('admin.dataKelas');
+
     Route::get('/admin/dataPengujian', [adminController::class, 'dataPengujian'])->name('admin.dataPengujian');
-    Route::get('/admin/detailkelas/{class_id}', [adminController::class, 'detailKelas'])->name('admin.detailKelas');
+    Route::get('/admin/detailkelas/{kelas_id}', [adminController::class, 'detailKelas'])->name('admin.detailKelas');
+    Route::get('/admin/detailkelas/{kelas_id}/tambah', [adminController::class, 'detailKelasCreate'])->name('detailKelas.create');
+
+    Route::get('/admin/dataKelas/tambah',[adminController::class,'dataKelasCreate'])->name('dataKelas.create');
+    Route::post('/admin/datakelas/tambah/form',[adminController::class,'dataKelasStore'])->name('dataKelas.store');
+    Route::get('/admin/datakelas/{kelas}/edit',[adminController::class,'dataKelasedit']) ->name('dataKelas.edit');
+    Route::patch('/admin/datakelas/{kelas}',[adminController::class,'dataKelasUpdate']) ->name('dataKelas.update');
+    Route::delete('/admin/datakelas/{kelas}',[adminController::class,'dataKelasDelete']) ->name('dataKelas.delete');
 
 
 });

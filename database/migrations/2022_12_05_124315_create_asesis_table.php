@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('asesis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('classes_id');
+            $table->unsignedInteger('kelas_id')->onDelete('cascade');
             // $table->unsignedInteger('user_id')->index();
             // $table->unsignedInteger('prodi_id')->index();
             $table->string('nisn')->index();

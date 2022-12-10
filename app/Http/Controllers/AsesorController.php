@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Classes;
+use App\Models\kelas;
 use App\Models\Asesi;
 
 class AsesorController extends Controller
@@ -33,13 +33,13 @@ class AsesorController extends Controller
     }
 
     public function dataKelas(){
-        $classes = Classes::withCount('asesis')->orderBy('nama_kelas')->get();
-        return view('asesor/dataKelas',['classes' => $classes]);
+        $kelases = Kelas::withCount('asesis')->orderBy('nama_kelas')->get();
+        return view('asesor/dataKelas',['kelases' => $kelases]);
     }
 
-    public function detailKelas($class_id){
-        $asesis = Asesi::Where('classes_id',$class_id)->orderBy('name')->paginate(10);
-        $nama_kelas = Classes::find($class_id)->nama_kelas;
+    public function detailKelas($kelas_id){
+        $asesis = Asesi::Where('kelas_id',$kelas_id)->orderBy('name')->paginate(10);
+        $nama_kelas = Kelas::find($kelas_id)->nama_kelas;
         return view('asesor/detailKelas',
                     ['asesis' => $asesis,
                     'nama_kelas' => $nama_kelas,]
