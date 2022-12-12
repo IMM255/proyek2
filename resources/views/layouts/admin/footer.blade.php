@@ -55,7 +55,7 @@ $(document).ready(function () {
   bsCustomFileInput.init();
 });
 </script> -->
-
+@include('sweetalert::alert')
 
 </body>
 </html>

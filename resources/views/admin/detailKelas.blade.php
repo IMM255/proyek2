@@ -2,40 +2,14 @@
 @section('title','Data Kelas')
 @section('halaman','Data Kelas')
 @section('content')
-{{-- <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table> --}}
-
-
 
   <h2 class="" style="margin-top: 20px; margin-left: 1em; font-weight: bold">Info Kelas</h2>
   <hr style="width: 90%; margin-top:2em;">
+  {{-- <div class="text-end pt-5 pb-4">
+    <a href="{{route ('detailKelas.create')}}" class="btn btn-info">Tambah Kelas</a>
+    </a>
+  </div> --}}
+
 
   {{-- Judul Card --}}
   <div class="container">
@@ -60,8 +34,17 @@
                     <td><!-- Large modal -->
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa-solid fa-info"></i></button>
                     </td>
+                    <td>
+                        <a href="{{route('dataKelas.editAsesis',['asesi' => $asesi->id])}}" class="btn btn-secondary" title="Edit siswa">Edit</a>
+                        <form action="{{route('dataKelas.deleteAsesis',['asesi' => $asesi->id ])}}"
+                        method="POST" class="d-inline">
+                        @csrf @method('DELETE')
+                        <button type="submit" class="btn btn-danger shadow-none btn-hapus"
+                        title="Hapus Siswa" data-name="{{$asesi->name}}">
+                        Hapus</button>
+                        </form>
+                    </td>
                   </tr>
-
                   @endforeach
                 </tbody>
               </table>

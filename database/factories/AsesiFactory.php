@@ -17,8 +17,7 @@ class AsesiFactory extends Factory
     public function definition()
     {
         return [
-            'classes_id' => $this->faker->numerify(2
-        ),
+            'kelas_id' => $this->faker->numerify(1),
             'nisn' => $this->faker->unique()->numerify('210######'),
             'name' => $this->faker->firstName." ".$this->faker->lastName,
             'nik' =>  $this->faker->unique()->numerify('310######'),

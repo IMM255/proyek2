@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Asesi extends Model
 {
     use HasFactory;
+    protected $fillable = ['name','nisn','kelas_id'];
     public function classes()
     {
         return $this->belongsTo('App\Models\Classes');
