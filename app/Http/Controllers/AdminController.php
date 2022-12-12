@@ -29,6 +29,14 @@ class AdminController extends Controller
         return view('admin/event');
     }
 
+    public function detailEvent(){
+        return view('admin/detailEvent');
+    }
+
+    public function detailEventasesor(){
+        return view('admin/detailEvent-asesor');
+    }
+
     public function akun(){
         return view('admin/manajemenAkun');
     }

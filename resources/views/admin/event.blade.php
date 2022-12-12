@@ -9,6 +9,7 @@
     </div>
     <br>
     <div class="col-mb-3">
+        {{-- card event --}}
         <div class="card card-success">
             <div class="card-header">
                 <h2 class="card-title">SESI A</h2>
@@ -16,20 +17,142 @@
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                     </button>
                 </div>
-                <!-- /.card-tools -->
             </div>
-            <!-- /.card-header -->
             <div class="card-body">
-                <h6>Waktu : </h6>
+                <table border="0">
+                    <tr>
+                        <td style="width: 250px;"><h6>Kuota Peserta</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>10</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Tempat Uji Kompetensi</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>Laboratorium Software</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Skema</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6><b>A001.234</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Waktu Pelaksanaan</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>12 September 2023 <b>07.00 WIB</b> - 12 September 2023 <b>15.00 WIB</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Status Event</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><span class="badge badge-pill badge-success">Sudah Selesai</span>
+                        </th>
+                    </tr>
+                </table>
+                {{-- <h6>Waktu : </h6>
                 <h6>Tempat : </h6>
-                <h6>Jumlah Asesi : </h6>
+                <h6>Jumlah Asesi : </h6> --}}
             </div>
-            <!-- /.card-body -->
             <div class="card-body">
-                <button type="button" class="btn btn-sm btn-primary">Detail</button>
+                <a href="{{route('admin.detailEvent');}}" type="button" class="btn btn-sm btn-primary">Detail</a>
                 <button type="button" class="btn btn-sm btn-danger">Hapus</button>
             </div>
         </div>
+        {{-- end of card event --}}
+        {{-- card event --}}
+        <div class="card card-warning">
+            <div class="card-header">
+                <h2 class="card-title">SESI B</h2>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <table border="0">
+                    <tr>
+                        <td style="width: 250px;"><h6>Kuota Peserta</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>10</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Tempat Uji Kompetensi</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>Laboratorium Software</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Skema</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6><b>B001.234</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Waktu Pelaksanaan</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>14 September 2023 <b>07.00 WIB</b> - 14 September 2023 <b>15.00 WIB</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Status Event</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><span class="badge badge-pill badge-warning">Sedang Berjalan</span>
+                        </th>
+                    </tr>
+                </table>
+                {{-- <h6>Waktu : </h6>
+                <h6>Tempat : </h6>
+                <h6>Jumlah Asesi : </h6> --}}
+            </div>
+            <div class="card-body">
+                <a href="{{route('admin.detailEvent');}}" type="button" class="btn btn-sm btn-primary">Detail</a>
+                <button type="button" class="btn btn-sm btn-danger">Hapus</button>
+            </div>
+        </div>
+        {{-- end of card event --}}
+        {{-- card event --}}
+        <div class="card card-warning">
+            <div class="card-header">
+                <h2 class="card-title">SESI C</h2>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <table border="0">
+                    <tr>
+                        <td style="width: 250px;"><h6>Kuota Peserta</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>10</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Tempat Uji Kompetensi</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>Laboratorium Software</h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Skema</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6><b>C001.234</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Waktu Pelaksanaan</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><h6>15 September 2023 <b>07.00 WIB</b> - 15 September 2023 <b>15.00 WIB</b></h6></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;"><h6>Status Event</h6></td>
+                        <th style="width: 20px;"><h6>:</h6></th>
+                        <th style="width: 450px;"><span class="badge badge-pill badge-warning">Sedang Berjalan</span>
+                        </th>
+                    </tr>
+                </table>
+                {{-- <h6>Waktu : </h6>
+                <h6>Tempat : </h6>
+                <h6>Jumlah Asesi : </h6> --}}
+            </div>
+            <div class="card-body">
+                <a href="{{route('admin.detailEvent');}}" type="button" class="btn btn-sm btn-primary">Detail</a>
+                <button type="button" class="btn btn-sm btn-danger">Hapus</button>
+            </div>
+        </div>
+        {{-- end of card event --}}
     </div>
 </div>
 

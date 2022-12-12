@@ -113,6 +113,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [AdminController::class, 'index'])->name('admin.home');
     Route::get('/admin/data', [AdminController::class, 'data'])->name('admin.data');
     Route::get('/admin/event', [AdminController::class, 'event'])->name('admin.event');
+    Route::get('/admin/detailEvent', [AdminController::class, 'detailEvent'])->name('admin.detailEvent');
+    Route::get('/admin/detailEvent-asesor', [AdminController::class, 'detailEventasesor'])->name('admin.detailEvent-asesor');
     Route::get('/admin/Manajemen-Akun', [AdminController::class, 'akun'])->name('admin.Manajemen-Akun');
     Route::get('/admin/penilaian', [AdminController::class, 'penilaian'])->name('admin.penilaian');
     Route::get('/admin/sertifikat', [AdminController::class, 'sertifikat'])->name('admin.sertifikat');
