@@ -55,6 +55,7 @@ $(document).ready(function () {
   bsCustomFileInput.init();
 });
 </script> -->
+<script src="https://kit.fontawesome.com/01bb568c0b.js" crossorigin="anonymous"></script>
 @include('sweetalert::alert')
 
 </body>

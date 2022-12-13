@@ -27,7 +27,7 @@
          @method('DELETE')
          @csrf
         <button type="submit" class="btn btn-danger shadow-none btn-hapus"
-        title="Hapus Jurusan" data-name="{{$kelas->nama_kelas}}" data-table="kelas">
+        title="Hapus kelas" data-name="{{$kelas->nama_kelas}}" data-table="kelas">
           <i class="fa fa-trash fa-fw"></i>
       </button>
       </form>

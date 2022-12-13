@@ -31,8 +31,8 @@
                     <th scope="row">{{ $loop->iteration}}</th>
                     <td>{{$asesi->name}}</td>
                     <td><a class="badge badge-pill badge-warning">Belum Diuji</a></td>
-                    <td><!-- Large modal -->
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa-solid fa-info"></i></button>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal--{{$asesi->id}}"><i class="fa-solid fa-info"></i></button>
                     </td>
                     <td>
                         <a href="{{route('dataKelas.editAsesis',['asesi' => $asesi->id])}}" class="btn btn-secondary" title="Edit siswa">Edit</a>
@@ -40,7 +40,7 @@
                         method="POST" class="d-inline">
                         @csrf @method('DELETE')
                         <button type="submit" class="btn btn-danger shadow-none btn-hapus"
-                        title="Hapus Siswa" data-name="{{$asesi->name}}">
+                        title="Hapus siswa" data-name="{{$asesi->name}}" data-table="siswa">
                         Hapus</button>
                         </form>
                     </td>
@@ -51,8 +51,8 @@
         </div>
       </div>
 
-      {{-- modal --}}
-      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      @foreach ($asesis as $asesi )
+      <div id="modal--{{$asesi->id}}" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="container">
@@ -63,37 +63,37 @@
                         <tr>
                             <th style="width: 200px">Nama Siswa</th>
                             <th style="width: 10px">:</th>
-                            <td>Hisyam</td>
+                            <td>{{$asesi->name}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">Kelas</th>
                             <th style="width: 10px">:</th>
-                            <td>Rekayasa Perangkat Lunak - XII RPL 1</td>
+                            <td>{{$nama_kelas}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">NISN</th>
                             <th style="width: 10px">:</th>
-                            <td>21030441221</td>
+                            <td>{{$asesi->nisn}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">Alamat</th>
                             <th style="width: 10px">:</th>
-                            <td>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</td>
+                            <td>{{$asesi->address}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">No Telepon</th>
                             <th style="width: 10px">:</th>
-                            <td>08978468041</td>
+                            <td>{{$asesi->phone}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">Jenis Kelamin</th>
                             <th style="width: 10px">:</th>
-                            <td>Laki - laki</td>
+                            <td>{{$asesi->gender}}</td>
                         </tr>
                         <tr>
                             <th style="width: 200px">Tanggal Lahir</th>
                             <th style="width: 10px">:</th>
-                            <td><p>12-03-2003</p></td>
+                            <td><p>{{$asesi->birth_date}}</p></td>
                         </tr>
                       </table>
                 </div>
@@ -101,6 +101,7 @@
           </div>
         </div>
       </div>
+      @endforeach
       {{-- end of modal --}}
       <div class="row">
         <div class="mx-auto mt-3">
